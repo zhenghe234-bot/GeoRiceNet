@@ -38,6 +38,20 @@ def load_density(path: Path) -> np.ndarray:
     raise ValueError(f"Unsupported density format: {path}")
 
 
+def load_optional_depth(row: dict[str, str], base_dir: Path) -> np.ndarray | None:
+    value = row.get("depth_path", "")
+    if not value:
+        return None
+    path = resolve_path(value, base_dir)
+    if not path.exists():
+        raise FileNotFoundError(path)
+    suffix = path.suffix.lower()
+    if suffix == ".npy":
+        return np.load(path).astype(np.float32)
+    image = Image.open(path).convert("L")
+    return np.asarray(image, dtype=np.float32) / 255.0
+
+
 def resize_density_to_target(density: np.ndarray, target_hw: tuple[int, int]) -> np.ndarray:
     target_h, target_w = target_hw
     original_sum = float(np.maximum(density, 0.0).sum())
@@ -81,8 +95,9 @@ class GeoRiceDataset(Dataset):
 
         target_hw = (height // 2, width // 2)
         density = resize_density_to_target(load_density(density_path), target_hw)
+        depth = load_optional_depth(row, base_dir)
         rgb = rgb_prior(image_rgb, target_hw)
-        geometry = build_geometry_priors(image_rgb, depth=None, target_hw=target_hw)
+        geometry = build_geometry_priors(image_rgb, depth=depth, target_hw=target_hw)
         count = float(row.get("count", density.sum()))
 
         if self.train and self.crop_size > 0:
