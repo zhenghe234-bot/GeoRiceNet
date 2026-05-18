@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <img src="Network%20architecture%20of%20GeoRiceNet.tif" alt="Network architecture of GeoRiceNet" width="960">
+  <img src="Network%20architecture%20of%20GeoRiceNet.png" alt="Network architecture of GeoRiceNet" width="960">
 </p>
 
 GeoRiceNet is a PyTorch implementation of a reflection-aware geometry-gated density counting model for UAV crop imagery. The release contains the model, prior construction utilities, losses, training entry points, and transfer-friendly reliability gate modules. Data, annotations, trained weights, generated experiment outputs, and manuscript files are intentionally excluded.
@@ -21,7 +21,7 @@ GeoRiceNet is a PyTorch implementation of a reflection-aware geometry-gated dens
 GeoRiceNet treats pseudo geometry and reflection priors as reliability cues rather than replacement modalities. The feature-level GeoGate calibrates RiceNet density features, and the transferable reliability gate can fuse RGB and geometry-guided density responses.
 
 <p align="center">
-  <img src="Comparison%20on%20public%20agricultural%20counting%20datasets.tif" alt="Comparison on public agricultural counting datasets" width="820">
+  <img src="Comparison%20on%20public%20agricultural%20counting%20datasets.png" alt="Comparison on public agricultural counting datasets" width="820">
 </p>
 
 <p align="center">
@@ -30,8 +30,8 @@ GeoRiceNet treats pseudo geometry and reflection priors as reliability cues rath
 
 Full-resolution figure sources:
 
-- [Network architecture of GeoRiceNet](<Network architecture of GeoRiceNet.tif>)
-- [Comparison on public agricultural counting datasets](<Comparison on public agricultural counting datasets.tif>)
+- [Network architecture of GeoRiceNet](<Network architecture of GeoRiceNet.png>)
+- [Comparison on public agricultural counting datasets](<Comparison on public agricultural counting datasets.png>)
 
 ## Repository Layout
 
