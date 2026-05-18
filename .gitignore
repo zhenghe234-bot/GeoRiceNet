@@ -45,9 +45,15 @@ logs/
 *.jpg
 *.jpeg
 *.png
+*.webp
 *.tif
 *.tiff
 *.bmp
+!assets/
+!assets/*.jpg
+!assets/*.png
+!assets/*.webp
+!assets/*.svg
 *.doc
 *.docx
 *.ppt
