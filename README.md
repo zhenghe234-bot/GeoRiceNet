@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/network_architecture.webp" alt="Network architecture of GeoRiceNet" width="520">
+  <img src="Network%20architecture%20of%20GeoRiceNet.tif" alt="Network architecture of GeoRiceNet" width="960">
 </p>
 
 GeoRiceNet is a PyTorch implementation of a reflection-aware geometry-gated density counting model for UAV crop imagery. The release contains the model, prior construction utilities, losses, training entry points, and transfer-friendly reliability gate modules. Data, annotations, trained weights, generated experiment outputs, and manuscript files are intentionally excluded.
@@ -20,20 +20,15 @@ GeoRiceNet is a PyTorch implementation of a reflection-aware geometry-gated dens
 
 GeoRiceNet treats pseudo geometry and reflection priors as reliability cues rather than replacement modalities. The feature-level GeoGate calibrates RiceNet density features, and the transferable reliability gate can fuse RGB and geometry-guided density responses.
 
-<table>
-  <tr>
-    <td width="50%" align="center">
-      <img src="assets/public_benchmark_comparison.webp" alt="Qualitative comparison on public agricultural counting datasets" width="260"><br>
-      <sub><b>Cross-dataset qualitative comparison</b></sub>
-    </td>
-    <td width="50%" align="center">
-      <img src="assets/glare_intensity_levels.webp" alt="Glare intensity levels and masks" width="300"><br>
-      <sub><b>Reflection cue and glare mask construction</b></sub>
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <img src="Comparison%20on%20public%20agricultural%20counting%20datasets.tif" alt="Comparison on public agricultural counting datasets" width="820">
+</p>
 
-Full-resolution figure sources are kept as TIFF files for paper-quality viewing:
+<p align="center">
+  <sub><b>Qualitative comparison on public agricultural counting datasets.</b></sub>
+</p>
+
+Full-resolution figure sources:
 
 - [Network architecture of GeoRiceNet](<Network architecture of GeoRiceNet.tif>)
 - [Comparison on public agricultural counting datasets](<Comparison on public agricultural counting datasets.tif>)
