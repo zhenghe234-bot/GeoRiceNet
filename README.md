@@ -1,6 +1,42 @@
-# GeoRiceNet
+<h1 align="center">GeoRiceNet</h1>
 
-GeoRiceNet is a PyTorch implementation of a reflection-aware geometry-gated density counting model for UAV crop imagery. The code release contains the model, prior construction utilities, losses, and transfer-friendly reliability gate modules. Data, annotations, trained weights, generated results, and manuscript files are not included.
+<p align="center">
+  <b>Reflection-aware geometry-gated density counting for UAV crop imagery</b>
+</p>
+
+<p align="center">
+  <img alt="Python" src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white">
+  <img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-research%20code-EE4C2C?style=flat-square&logo=pytorch&logoColor=white">
+  <img alt="Data" src="https://img.shields.io/badge/Data-not%20included-6B7280?style=flat-square">
+</p>
+
+<p align="center">
+  <img src="assets/network_architecture.webp" alt="Network architecture of GeoRiceNet" width="520">
+</p>
+
+GeoRiceNet is a PyTorch implementation of a reflection-aware geometry-gated density counting model for UAV crop imagery. The release contains the model, prior construction utilities, losses, training entry points, and transfer-friendly reliability gate modules. Data, annotations, trained weights, generated experiment outputs, and manuscript files are intentionally excluded.
+
+## Visual Overview
+
+GeoRiceNet treats pseudo geometry and reflection priors as reliability cues rather than replacement modalities. The feature-level GeoGate calibrates RiceNet density features, and the transferable reliability gate can fuse RGB and geometry-guided density responses.
+
+<table>
+  <tr>
+    <td width="50%" align="center">
+      <img src="assets/public_benchmark_comparison.webp" alt="Qualitative comparison on public agricultural counting datasets" width="260"><br>
+      <sub><b>Cross-dataset qualitative comparison</b></sub>
+    </td>
+    <td width="50%" align="center">
+      <img src="assets/glare_intensity_levels.webp" alt="Glare intensity levels and masks" width="300"><br>
+      <sub><b>Reflection cue and glare mask construction</b></sub>
+    </td>
+  </tr>
+</table>
+
+Full-resolution figure sources are kept as TIFF files for paper-quality viewing:
+
+- [Network architecture of GeoRiceNet](<Network architecture of GeoRiceNet.tif>)
+- [Comparison on public agricultural counting datasets](<Comparison on public agricultural counting datasets.tif>)
 
 ## Repository Layout
 
@@ -26,7 +62,7 @@ The public repository intentionally excludes:
 - raw UAV images and public benchmark copies
 - point annotations, density maps, and HDF5 label files
 - trained checkpoints and pretrained weights
-- generated figures, tables, logs, and temporary experiment outputs
+- intermediate tables, logs, and temporary experiment outputs
 - manuscript, revision, and similarity-check files
 
 Use the CLI arguments in `scripts/` to point to your own data and checkpoints locally.
