@@ -44,6 +44,14 @@ Paths may be absolute or relative to the manifest file. `density_path` should po
 - `.npy` density map, or
 - `.h5` / `.hdf5` file containing a `density` dataset.
 
+An optional `depth_path` column can be added when pseudo-depth maps are available:
+
+```text
+image_path,density_path,depth_path,count
+```
+
+If `depth_path` is omitted or empty, GeoRiceNet still runs and builds the reflection/texture priors from RGB alone.
+
 The model predicts a density map, and the count is obtained by summing all density pixels.
 
 ## Quick Start
