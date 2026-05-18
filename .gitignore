@@ -54,6 +54,8 @@ logs/
 !assets/*.png
 !assets/*.webp
 !assets/*.svg
+!Network architecture of GeoRiceNet.tif
+!Comparison on public agricultural counting datasets.tif
 *.doc
 *.docx
 *.ppt
