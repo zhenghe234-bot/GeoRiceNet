@@ -31,14 +31,12 @@ GeoRiceNet treats pseudo geometry and reflection priors as reliability cues rath
 ## Demo Video
 
 <p align="center">
-  <a href="assets/demo.mp4">
-    <img src="Network%20architecture%20of%20GeoRiceNet.png" alt="Open GeoRiceNet demo video" width="760">
-  </a>
+  <b><a href="https://zhenghe234-bot.github.io/GeoRiceNet/">Open autoplay demo page</a></b><br>
+  <a href="assets/demo.mp4">Open uploaded MP4 file</a>
 </p>
 
 <p align="center">
-  <b><a href="assets/demo.mp4">Open demo video</a></b><br>
-  <sub>GitHub README pages do not reliably render inline MP4 players, so the preview opens the uploaded video file.</sub>
+  <sub>The autoplay page uses a muted HTML5 video because browsers block autoplay with sound.</sub>
 </p>
 
 Full-resolution figure sources:
