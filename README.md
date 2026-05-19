@@ -28,6 +28,16 @@ GeoRiceNet treats pseudo geometry and reflection priors as reliability cues rath
   <sub><b>Qualitative comparison on public agricultural counting datasets.</b></sub>
 </p>
 
+## Demo Video
+
+<p align="center">
+  <video src="assets/demo.mp4" controls width="900"></video>
+</p>
+
+<p align="center">
+  <a href="assets/demo.mp4">Open demo video</a>
+</p>
+
 Full-resolution figure sources:
 
 - [Network architecture of GeoRiceNet](<Network architecture of GeoRiceNet.png>)
