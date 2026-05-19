@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GeoRiceNet Demo</title>
+  <meta name="description" content="Autoplay demo page for GeoRiceNet.">
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f8f6;
+      --ink: #17231f;
+      --muted: #5f716b;
+      --line: #dce7e0;
+      --accent: #2f7d5d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(circle at top right, #e3f2eb 0, transparent 34%), var(--bg);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    }
+    main {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 34px 0 42px;
+    }
+    header {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 18px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(32px, 5vw, 58px);
+      line-height: 0.95;
+      letter-spacing: 0;
+    }
+    p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.55;
+    }
+    a {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .button {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 10px 14px;
+      background: #ffffff;
+      color: var(--ink);
+      box-shadow: 0 6px 18px rgba(23, 35, 31, 0.06);
+      white-space: nowrap;
+    }
+    .video-shell {
+      background: #101817;
+      border: 1px solid #1f302d;
+      border-radius: 8px;
+      box-shadow: 0 22px 50px rgba(18, 35, 30, 0.18);
+      overflow: hidden;
+    }
+    video {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: calc(100vh - 180px);
+      background: #101817;
+    }
+    .note {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+    }
+    @media (max-width: 720px) {
+      header { align-items: start; flex-direction: column; }
+      .actions { justify-content: flex-start; }
+      main { padding-top: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>GeoRiceNet Demo</h1>
+        <p>Reflection-aware geometry-gated density counting for UAV crop imagery.</p>
+      </div>
+      <nav class="actions" aria-label="Links">
+        <a class="button" href="https://github.com/zhenghe234-bot/GeoRiceNet">Repository</a>
+        <a class="button" href="https://raw.githubusercontent.com/zhenghe234-bot/GeoRiceNet/main/assets/demo.mp4">Download video</a>
+      </nav>
+    </header>
+
+    <section class="video-shell" aria-label="GeoRiceNet demo video">
+      <video autoplay muted loop playsinline controls preload="auto">
+        <source src="https://raw.githubusercontent.com/zhenghe234-bot/GeoRiceNet/main/assets/demo.mp4" type="video/mp4">
+      </video>
+    </section>
+
+    <p class="note">The video autoplays muted because modern browsers block autoplay with sound.</p>
+  </main>
+</body>
+</html>
